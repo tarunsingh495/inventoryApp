@@ -1,8 +1,8 @@
 const {DataTypes} = require('sequelize');
 const connect =require('../configdb.js');
-const mfg=connect.define('item',{
+const mfg=connect.define('mfg',{
 	mfg_id:{
-		type:DataTypes.STRING,
+		type:DataTypes.INTEGER,
 		primarykey:true,
 
 	},
@@ -28,4 +28,4 @@ const mfg=connect.define('item',{
 	}
 	}
 		);
-module.exports=mfg;
+module.exports={mfg};

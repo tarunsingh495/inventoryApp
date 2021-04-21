@@ -1,8 +1,9 @@
 const {DataTypes} = require('sequelize');
 const connect =require('../configdb.js');
+//const {mfg}=require('./manufacturer.js');
 const item=connect.define('item',{
 	item_id:{
-		type:DataTypes.STRING,
+		type:DataTypes.INTEGER,
 		primarykey:true,
 
 	},
@@ -16,7 +17,12 @@ const item=connect.define('item',{
 	},
 	manf_id:{
 		type:DataTypes.INTEGER,
-		allowNull:false
+		allowNull:false,
+		/*references:{
+			model:mfg,
+			key:'mfg_id'
+		}*/
+
 	},
 	quantity:{
 		type:DataTypes.INTEGER,
@@ -28,4 +34,4 @@ const item=connect.define('item',{
 	}
 	}
 		);
-module.exports=item;
+module.exports={item};
