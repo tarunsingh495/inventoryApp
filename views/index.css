@@ -1,0 +1,63 @@
+body{
+	margin:0;
+}
+
+.sidebar{
+	
+	height:100vh;
+	background-color: #212529;
+	font-size:2em;
+	color: white;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    grid-column: 1/span 2;
+    grid-row: 1;  
+  
+    z-index: 2;
+}
+#title{
+	padding: 8%;
+    cursor: pointer; 
+}
+.container{
+	display: grid;
+    grid-template-columns: 10% 15% auto;
+    z-index: 1;
+
+}
+.navbar{
+	background-color:rgb(231,233,236);
+	border-radius: 4%;
+	width: 50%;
+	padding: 5px;
+	margin: 5%;
+	margin-left: 10%;
+	margin-bottom: 15%;
+    color: black;
+    font-size: medium;
+    cursor: pointer; 
+}
+#open{
+	grid-row: 1;
+	grid-column: 1;
+	z-index: -10;
+	height: 100vh;
+	background-color:#212529;
+   
+
+}
+#opensvg{
+	width: 50%;
+	cursor: pointer;
+	float: right;
+}
+#close{
+	width: 20%;
+	margin-left: auto;
+	cursor: pointer; 
+}
+.collapse{
+	transform: translateX(-100%);
+	transition: 0.5s ease;
+}
