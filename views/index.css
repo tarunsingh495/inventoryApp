@@ -8,40 +8,43 @@ body{
 	background-color: #212529;
 	font-size:2em;
 	color: white;
-	display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+	display: grid;
+    grid-template-columns:50% 50%; 
+    grid-template-rows: 10% repeat(5,10%); 
+    grid-row-gap: 8px;
+   
+    grid-auto-flow: column;
+   
     grid-column: 1/span 2;
     grid-row: 1;  
   
     z-index: 2;
+    transition: 0.5s ease;
 }
-#title{
-	padding: 8%;
-    cursor: pointer; 
-}
+
 .container{
 	display: grid;
     grid-template-columns: 10% 15% auto;
-    z-index: 1;
-
+    
 }
 .navbar{
-	background-color:rgb(231,233,236);
-	border-radius: 4%;
-	width: 50%;
-	padding: 5px;
-	margin: 5%;
-	margin-left: 10%;
-	margin-bottom: 15%;
-    color: black;
-    font-size: medium;
-    cursor: pointer; 
+	color: white;
+    font-size: large;
+    cursor: pointer;
+    
+    padding-left: 50%;
+}   
+#title{
+	font-size: 1.2em;
+}
+
+.navbar:hover{
+	color: black;
 }
 #open{
 	grid-row: 1;
 	grid-column: 1;
-	z-index: -10;
+	
 	height: 100vh;
 	background-color:#212529;
    
@@ -54,10 +57,18 @@ body{
 }
 #close{
 	width: 20%;
-	margin-left: auto;
-	cursor: pointer; 
+	margin-left:auto;
+	float: right;
+	cursor: pointer;
+	grid-column: 1/3;
+	
 }
+
 .collapse{
 	transform: translateX(-100%);
 	transition: 0.5s ease;
+}
+a{
+	text-decoration: none;
+	color:white;
 }

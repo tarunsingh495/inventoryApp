@@ -1,15 +1,15 @@
 const close=document.querySelector("#close");
 const open=document.querySelector("#opensvg");
-console.log(open);
+
 const sidebar=document.querySelector(".sidebar");
 
 function closesidebar(event){
 	
-	sidebar.classList.add("collapse");
+	sidebar.classList.toggle("collapse");
 }
 function opensidebar(event){
 	
-	console.log("clicked");
+	sidebar.classList.toggle("collapse");
 }
 close.addEventListener('click',closesidebar);
 open.addEventListener('click',opensidebar);
