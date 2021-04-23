@@ -3,9 +3,26 @@ const {item}=require('./models/items.js');
 const {mfg}=require('./models/manufacturer.js');
 const {items_mfg}=require('./models/ref.js');
 const connect =require('./configdb.js');
+var path = require('path');
 const app=express();
+
+app.use(express.static(path.join(__dirname, "public")));
+app.set('view engine', 'hbs') 
+app.set('views',path.join(__dirname, 'views'));
+const messages = [
+   {
+     text: "Hi there!",
+     user: "Amando",
+     added: new Date()
+   },
+   {
+     text: "Hello World!",
+     user: "Charles",
+     added: new Date()
+   }
+];
 app.get("/",(req,res)=>{
-	app.send("INdex page");
+	res.render("index");
 });
 
 
