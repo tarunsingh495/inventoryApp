@@ -5,25 +5,16 @@ const {items_mfg}=require('./models/ref.js');
 const connect =require('./configdb.js');
 var path = require('path');
 const app=express();
+const indexRouter=require('./routes/indexRouter.js');
 
+//settting up my view engine
 app.use(express.static(path.join(__dirname, "public")));
 app.set('view engine', 'hbs') 
+//declaring path to css/js
 app.set('views',path.join(__dirname, 'views'));
-const messages = [
-   {
-     text: "Hi there!",
-     user: "Amando",
-     added: new Date()
-   },
-   {
-     text: "Hello World!",
-     user: "Charles",
-     added: new Date()
-   }
-];
-app.get("/",(req,res)=>{
-	res.render("index");
-});
+//sample message
+app.use('/',indexRouter);
+
 
 
 

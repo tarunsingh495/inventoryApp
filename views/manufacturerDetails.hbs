@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+	<!DOCTYPE html>
 <html>
 <head>
 	<title>My inventory app</title>
@@ -39,21 +40,20 @@
 	</div>
 	<div class="content"> 
 		
-		{{#each messages as |m|}}
+		
+	{{#each mfgDetails as |n| }}
 	<div class="card">
-	 Item id :    {{ m.item_id }} <br>
-	Item name:    {{ m.item_name }} <br>
-	Item type:    {{ m.item_type }} <br>
-	Manf id:      {{ m.manf_id }} <br>
-	Item quantity {{ m.quantity }} <br>
-	Item Color	  {{ m.color }} <br>
+	 id  :  {{ n.mfg_id }} <br>
+	 name:  {{ n.mfg_name }} <br>
+	 country: {{ n.country }} <br>
+	 id: {{ n.manf_id }} <br>
+	 Phone: {{ n.phone }} <br>
+	 Pincode :{{ n.pincode }} <br>
 	</div>
 	{{/each}}
 	
 	
 </div>
-</div>
-
 <script type="text/javascript" src="/scripts/script.js"></script>
 </body>
 </html>

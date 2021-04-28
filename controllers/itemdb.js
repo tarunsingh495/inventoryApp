@@ -15,3 +15,4 @@ await item.bulkCreate([
 	}
 }
 insert()
+
