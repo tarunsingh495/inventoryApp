@@ -18,6 +18,9 @@ await mfg.bulkCreate([
 		try{
 			const file=await mfg.findAll()
 			
-		}
-	}
+		}catch(err){
+        console.log("hello");
+        }
+}
+	
 insert()
